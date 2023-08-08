@@ -10,8 +10,9 @@ public class BulletController : MonoBehaviour
     private Vector3 moveDirection => MoveDirection;
     public Vector3 StartPoint;
     public float MaxLength = 10;
+    public CubeType cubeType;
 
-    private enum CubeType
+    public enum CubeType
     {
         Bullet,
         Enemy,
@@ -27,5 +28,14 @@ public class BulletController : MonoBehaviour
     {
         Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
         transform.rotation = targetRotation;
+    }
+
+    void OnTriggerEnter(Collider target)
+    {
+        if (cubeType == CubeType.Bullet && target.GetComponent<BulletController>().cubeType == CubeType.Enemy)
+        {
+            Destroy(target.gameObject);
+            Destroy(gameObject);
+        }
     }
 }
