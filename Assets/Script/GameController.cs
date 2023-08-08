@@ -51,7 +51,7 @@ namespace Script
                     {
                         // 获取相交点的位置
                         hitPoint = onehit.point;
-
+                        hitPoint.z = 1f;
                         // 在这里处理你的逻辑，使用 targetPosition 作为点击在远处平面上的位置
                         Debug.Log("点击位置在远处平面上的坐标：" + hitPoint);
                     }

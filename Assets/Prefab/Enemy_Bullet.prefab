@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6280894838413726164}
   - component: {fileID: 2559191487691604613}
+  - component: {fileID: 5979367643897694078}
   m_Layer: 0
   m_Name: Enemy_Bullet
   m_TagString: Untagged
@@ -26,8 +27,8 @@ Transform:
   m_GameObject: {fileID: 1391708754156108587}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6046098275123979594}
   m_Father: {fileID: 0}
@@ -49,6 +50,21 @@ MonoBehaviour:
   Speed: 3
   StartPoint: {x: 0, y: 0, z: 0}
   MaxLength: 15
+  cubeType: 1
+--- !u!136 &5979367643897694078
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391708754156108587}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6533619092541771984
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +76,6 @@ GameObject:
   - component: {fileID: 2855513968326579416}
   - component: {fileID: 1138322195506465848}
   - component: {fileID: 6200469610256843535}
-  - component: {fileID: 2433136605923483158}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Untagged
@@ -133,20 +148,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2433136605923483158
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6533619092541771984}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9055436740322907012
 GameObject:
   m_ObjectHideFlags: 0
